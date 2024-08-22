@@ -2,7 +2,7 @@
 {
     public interface IFoo
     {
-        string GetName();
+        string GetName(string etEllerAndet);
     }
 
     public interface IBar
@@ -12,9 +12,9 @@
 
     public class Foo : IFoo
     {
-        string IFoo.GetName()
+        string IFoo.GetName(string etEllerAndet)
         {
-            return "Foo";
+            return $"Foo - {etEllerAndet}";
         }
     }
 
@@ -28,7 +28,7 @@
 
         string IBar.GetName()
         {
-            return "Bar" + _foo.GetName();
+            return "Bar" + _foo.GetName("Det er mig der bestemmer :-)");
         }
     }
 }

@@ -13,7 +13,7 @@ namespace BusinessLogicTest
         {
             // Arrange
             var fooMock = new Mock<IFoo>();
-            fooMock.Setup(x => x.GetName()).Returns(foo);
+            fooMock.Setup(x => x.GetName(It.IsAny<string>())).Returns(foo);
 
             IBar sut = new Bar(fooMock.Object);
 
