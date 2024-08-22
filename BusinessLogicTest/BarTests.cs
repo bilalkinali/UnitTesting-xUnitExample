@@ -3,13 +3,13 @@ using Moq;
 
 namespace BusinessLogicTest
 {
-    public class UnitTest1
+    public class BarTests
     {
         
         [Theory]
         [InlineData("Hello", "BarHello")]
         [InlineData("Kode", "BarKode")]
-        public void Test1(string foo, string expected)
+        public void Test1(string foo, string expected) // Given-When-Then / Gherkin / Specflow
         {
             // Arrange
             var fooMock = new Mock<IFoo>();
